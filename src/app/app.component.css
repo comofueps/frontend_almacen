@@ -1,0 +1,28 @@
+main {
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-columns: auto repeat(2, 1fr);
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas:
+        "header header header"
+        "aside section section"
+        "footer footer footer";
+    height: 100vh;/* Ocupa el 100% de la altura de la ventana */
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+section {
+    grid-area: section;
+    margin: 15px;
+}
+
+footer {
+    grid-area: footer;
+}

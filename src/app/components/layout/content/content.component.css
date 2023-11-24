@@ -1,0 +1,65 @@
+.contenedor{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 210px auto;
+    
+    grid-template-areas: 
+    "titulo titulo"
+    "texto contenedor-img"
+    "caracteristicas contenedor-img";
+}
+
+
+.titulo{
+    grid-area: titulo;
+}
+
+.texto{
+    grid-area: texto;
+}
+
+.contenedor-img{
+    grid-area: contenedor-img;
+}
+
+.caracteristicas{
+    grid-area: caracteristicas;
+}
+
+.contenedor .titulo{
+    display: flex;
+    /* justify-content: center; */
+    font-weight: 600;
+    font-size: 26px;
+    padding: 10px;
+    align-items: center;
+}
+
+.contenedor .texto{
+    text-align: justify;
+    /* font-family: 'Raleway',sans-serif; */
+    font-style: italic;
+    padding: 10px;
+}
+
+.contenedor .contenedor-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+.item {
+    display: flex; /* Hacer que los elementos dentro de cada ítem se coloquen en fila */    
+    align-items: center; 
+}
+
+.item img{
+    height: 30px;
+}
+
+.item p{
+    padding: 10px;
+}
