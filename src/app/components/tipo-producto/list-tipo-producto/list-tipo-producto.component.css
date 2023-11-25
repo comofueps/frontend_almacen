@@ -1,0 +1,31 @@
+.contenedor a{
+    display: flex;  
+    width: 150px;
+    height: 50px;
+    padding: 5px;
+    background-color: #F8F9FA;
+    text-decoration: none;
+    color: #6c757d;
+    font-weight: 700;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+}
+
+.contenedor a i{
+    margin: 0 10px;
+}
+
+.contenedor a:hover{
+    background-color: #E9ECEF;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+

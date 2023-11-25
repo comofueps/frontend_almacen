@@ -1,1 +1,46 @@
-<p>add-venta works!</p>
+<div class="contenedor">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="contenedor-titulo">
+      <h2>Registrar nueva venta</h2>
+    </div>
+    <div>
+      <label for="nombre">Fecha de venta</label>
+      <input focused placeholder="Ingrese la fecha de venta " type="date" id="fechaVenta" formControlName="fechaVenta"
+        required>
+    </div>
+
+    <div>
+      <label for="marca">Subtotal</label>
+      <input placeholder="Ingrese el subtotal" min="0" type="number" id="subtotal" formControlName="subtotal" required>
+    </div>
+
+    <div>
+      <label for="precio">Impuestos</label>
+      <input placeholder="Ingrese los impuestos" min="0" type="number" id="impuestos" formControlName="impuestos" required>
+    </div>
+
+    <div>
+      <label for="stockMin">Descuentos</label>
+      <input placeholder="Ingrese los descuentos" min="0" type="number" id="descuentos" formControlName="descuentos" required>
+    </div>
+
+    <div>
+      <label for="cantidad">Total</label>
+      <input placeholder="Ingrese la cantidad" min="0" type="number" id="total" formControlName="total" required>
+    </div>
+
+    <div>
+      <label for="TipoProductoId">Cliente</label>
+      <select name="select" id="ClienteId" formControlName="ClienteId">
+        <option value="" selected>Seleccione una opcion</option>
+
+        <option *ngFor="let c of clientes" value="{{c.id}}">{{c.nombre}} </option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="!form.valid">Enviar</button>
+    <button class="cancelar" type="button" (click)="cancel()">Cancelar</button>
+  </form>
+
+</div>

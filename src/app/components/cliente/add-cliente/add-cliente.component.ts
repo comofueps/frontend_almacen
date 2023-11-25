@@ -35,7 +35,6 @@ export class AddClienteComponent implements OnInit {
 
   onSubmit(): void {
     const formValue: ClienteI = this.form.value;
-    const prueba:HTMLInputElement | null = document.getElementById('nombre') as HTMLInputElement;
     console.log(formValue);
     this.clienteService.createCliente(formValue).subscribe(
       () => {

@@ -1,1 +1,45 @@
-<p>add-producto works!</p>
+<div class="contenedor">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="contenedor-titulo">
+      <h2>Registrar nuevo producto</h2>
+    </div>
+    <div>
+      <label for="nombre">Nombre</label>
+      <input focused placeholder="Ingrese el nombre " type="text" id="nombre" formControlName="nombre" required>
+    </div>
+
+    <div>
+      <label for="marca">Marca</label>
+      <input placeholder="Ingrese la marca" type="text" id="marca" formControlName="marca" required>
+    </div>
+
+    <div>
+      <label for="precio">Precio</label>
+      <input placeholder="Ingrese el precio" type="text" id="precio" formControlName="precio" required>
+    </div>
+
+    <div>
+      <label for="stockMin">Stock min</label>
+      <input placeholder="Ingrese el stock minimo" type="number" id="stockMin" formControlName="stockMin" required>
+    </div>
+
+    <div>
+      <label for="cantidad">Cantidad</label>
+      <input placeholder="Ingrese la cantidad" type="number" id="cantidad" formControlName="cantidad" required>
+    </div>
+
+    <div>
+      <label for="TipoProductoId">Tipo de producto</label>
+      <select name="select" id="TipoProductoId" formControlName="TipoProductoId">
+        <option value="" selected>Seleccione una opcion</option>
+
+        <option *ngFor="let tp of tipoproducto" value="{{tp.id}}">{{tp.nombre}} </option>
+      </select>
+    </div>
+
+    <button type="submit" [disabled]="!form.valid">Enviar</button>
+    <button class="cancelar" type="button" (click)="cancel()">Cancelar</button>
+  </form>
+
+</div>

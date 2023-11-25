@@ -1,1 +1,15 @@
-<p>add-tipo-producto works!</p>
+<div class="contenedor">
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="contenedor-titulo">
+        <h2>Registrar nuevo tipo de producto</h2>
+      </div>
+      <div>
+        <label for="nombre">Nombre</label>
+        <input placeholder="Ingrese el nombre " type="text" id="nombre" formControlName="nombre" required>
+      </div>
+      <button type="submit" [disabled]="!form.valid">Enviar</button>
+      <button class="cancelar" type="button" (click)="cancel()">Cancelar</button>
+    </form>
+  
+  </div>
